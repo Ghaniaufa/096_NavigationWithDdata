@@ -85,7 +85,8 @@ fun EsLilinApp(
             composable(route = PengelolaHalaman.Contact.name){
                 HalamanForm(
                     onBackButtonClick = { cancelContactAndNavigateToHome(
-                        viewModel, navController
+                        viewModel,
+                        navController
                     ) },
                     onSubmitButtonClick = {
                         viewModel.setContact(it)
@@ -138,6 +139,5 @@ private fun cancelContactAndNavigateToHome(
     viewModel: OrderViewModel,
     navController: NavHostController
 ){
-    viewModel.resetContact()
     navController.popBackStack(PengelolaHalaman.Home.name, inclusive = false)
 }
