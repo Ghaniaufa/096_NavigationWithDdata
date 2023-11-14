@@ -90,6 +90,6 @@ fun HalamanHome(
 @Composable
 fun PreviewHalamanHome(){
     EsLilinTheme {
-        EsLilinApp()
+        HalamanHome(onNextButtonClicked = {})
     }
 }

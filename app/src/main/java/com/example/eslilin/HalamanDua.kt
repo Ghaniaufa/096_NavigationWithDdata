@@ -31,6 +31,11 @@ fun HalamanDua(
         Pair(stringResource(id = R.string.quantity), orderUIState.jumlah),
         Pair(stringResource(id = R.string.flavor), orderUIState.rasa)
     )
+    val contact = listOf(
+        Pair(stringResource(id = R.string.nama), orderUIState.nama),
+        Pair(stringResource(id = R.string.alamat), orderUIState.alamat),
+        Pair(stringResource(id = R.string.noTelp), orderUIState.noTelp)
+    )
     Column (
         modifier = modifier,
         verticalArrangement = Arrangement.SpaceBetween
