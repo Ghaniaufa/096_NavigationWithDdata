@@ -27,6 +27,7 @@ import com.example.eslilin.data.SumberData.flavors
 
 enum class PengelolaHalaman {
     Home,
+    Contact,
     Rasa,
     Summary
 }
@@ -80,6 +81,12 @@ fun EsLilinApp(
                         navController.navigate(PengelolaHalaman.Rasa.name)
                     }
                 )
+            }
+            composable(route = PengelolaHalaman.Contact.name){
+                HalamanForm(onSubmitButtonClick = {
+                    viewModel.setContact(it)
+                    navController.navigate(PengelolaHalaman.Rasa.name)
+                })
             }
             composable(route = PengelolaHalaman.Rasa.name) {
                 val context = LocalContext.current

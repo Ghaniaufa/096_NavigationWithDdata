@@ -17,7 +17,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import com.example.eslilin.data.OrderUiState
+import com.example.eslilin.ui.theme.EsLilinTheme
 import com.example.eslilin.ui.theme.komponen.FormatLabelHarga
 
 @Composable
