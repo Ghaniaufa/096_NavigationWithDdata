@@ -1,8 +1,5 @@
 <resources>
     <string name="app_name">Es Lilin Ceu Imas</string>
-    <String name="nama">Nama</String>
-    <String name="alamat">Alamat</String>
-    <String name="noTelp">No Telepon</String>
     <string name="back_button">Kembali</string>
     <string name="confirm">Konfirmasi</string>
     <string name="next">Lanjut</string>
@@ -18,4 +15,7 @@
     <string name="flavor">Rasa</string>
     <string name="subtotal_price">Subtotal : Rp %s</string>
     <string name="total_price">Total %s</string>
+    <string name="btn_submit">Submit</string>
+    <string name="btn_back">Back</string>
+
 </resources>
