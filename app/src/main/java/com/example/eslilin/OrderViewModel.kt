@@ -32,6 +32,9 @@ class OrderViewModel: ViewModel() {
     fun resetOrder(){
         _stateUI.value = OrderUiState()
     }
+    fun resetContact(){
+        _stateUI.resetReplayCache()
+    }
 
     private fun hitungHarga(
         jumlah: Int = _stateUI.value.jumlah,

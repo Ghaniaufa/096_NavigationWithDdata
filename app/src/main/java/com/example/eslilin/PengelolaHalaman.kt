@@ -83,10 +83,15 @@ fun EsLilinApp(
                 )
             }
             composable(route = PengelolaHalaman.Contact.name){
-                HalamanForm(onSubmitButtonClick = {
-                    viewModel.setContact(it)
-                    navController.navigate(PengelolaHalaman.Rasa.name)
-                })
+                HalamanForm(
+                    onBackButtonClick = { cancelContactAndNavigateToHome(
+                        viewModel, navController
+                    ) },
+                    onSubmitButtonClick = {
+                        viewModel.setContact(it)
+                        navController.navigate(PengelolaHalaman.Rasa.name)
+                    }
+                )
             }
             composable(route = PengelolaHalaman.Rasa.name) {
                 val context = LocalContext.current
@@ -127,4 +132,12 @@ private fun cancelOrderAndNavigateToRasa(
     navController: NavHostController
 ) {
     navController.popBackStack(PengelolaHalaman.Rasa.name, inclusive = false)
+}
+
+private fun cancelContactAndNavigateToHome(
+    viewModel: OrderViewModel,
+    navController: NavHostController
+){
+    viewModel.resetContact()
+    navController.popBackStack(PengelolaHalaman.Home.name, inclusive = false)
 }

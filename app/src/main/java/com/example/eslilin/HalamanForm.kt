@@ -26,7 +26,8 @@ import com.example.eslilin.ui.theme.EsLilinTheme
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HalamanForm(
-    onSubmitButtonClick: (MutableList<String>) -> Unit
+    onSubmitButtonClick: (MutableList<String>) -> Unit,
+    onBackButtonClick: (MutableList<String>) -> Unit,
 ) {
     var namaTxt by remember {
         mutableStateOf("")
@@ -66,13 +67,8 @@ fun HalamanForm(
         Button(onClick = {onSubmitButtonClick(listDataTxt)}) {
             Text(text = stringResource(id = R.string.btn_submit))
         }
-
-    }
-}
-@Preview(showBackground = true)
-@Composable
-fun HalamanHomePreview() {
-    EsLilinTheme {
-        HalamanForm(onSubmitButtonClick = {})
+        Button(onClick = {onBackButtonClick(listDataTxt)}) {
+            Text(text = stringResource(id = R.string.btn_back))
+        }
     }
 }
